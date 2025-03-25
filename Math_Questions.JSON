@@ -1,0 +1,127 @@
+[
+    {
+        "question": "What is the primary purpose of a software company?",
+        "options":  ["A)Hardware manufacturing","B)Developing and selling software products and services","C)Retail sales of computers" ,"D)Providing network cables"],
+        "answer":  "B)Developing and selling software products and services"
+    },
+    {
+        "question":"What is the worst-case time complexity of inserting an element into a Binary Search Tree (BST)?",
+        "options": ["A) O(1)","B) O(log n)","C) O(n)","D) O(n log n)"],
+        "answer": "C) O(n)"
+    },
+    {
+        "question": "What does SDLC stand for in software development?",
+        "options": ["A) System Development Large Cycle","B) Software Deployment and Launch Cycle","C) Software Development Life Cycle","D) System Design Lifecycle"],
+        "answer": "C) Software Development Life Cycle"
+    },
+    {
+        "question": "A car travels at a speed of 60 km/hr. How much time will it take to cover 150 km?",
+        "options": ["A) 1 hour","B) 2.5 hours","C) 3 hours","D) 4 hours"],
+        "answer": "B) 2.5 hours"
+    },
+    {
+        "question": "What is the main purpose of version control systems like Git?",
+        "options": ["A)To develop mobile applications","B) To track changes in code and collaborate on software development","C) To improve the security of a software product","D) To manage databases"],
+        "answer":"B) To track changes in code and collaborate on software development"
+    },
+    {
+        "question": "The price of a product increases from ₹500 to ₹600. What is the percentage increase?",
+        "options":  ["A) 10%","B) 15%","C) 20%","D) 25%"],
+        "answer":  "C) 20%"
+    },
+    {
+        "question": " You have 2 sorted arrays, and you need to find the median of the combined sorted array. What is the optimal approach?",
+        "options": ["A) Merge both arrays and find the median - O(n)","B) Use Binary Search on the smaller array - O(log n)","C) Use HashMap to store elements - O(n log n)","D) Use Min-Heap for merging - O(n log n)"],
+        "answer": "B) Use Binary Search on the smaller array - O(log n)"
+    },
+    {
+        "question": "Which of the following techniques is best suited for detecting a cycle in a directed graph?",
+        "options": ["A) BFS Traversal","B) DFS with Recursion Stack","C) Kruskal's Algorithm","D) Dijkstra’s Algorithm"],
+        "answer": "B) DFS with Recursion Stack"
+    },
+    {
+        "question": "A and B together can complete a task in 8 days. A alone can do it in 12 days. How many days will B alone take?",
+        "options": ["A) 16 days","B) 18 days","C) 20 days","D) 24 days"],
+        "answer": "D) 24 days"
+    },
+    {
+        "question": "A trader buys an item for ₹2,000 and sells it at a 25% profit. What is the selling price?",
+        "options": ["A) ₹2,200","B) ₹2,400","C) ₹2,500","D) ₹2,600"],
+        "answer":"C) ₹2,500"
+    },
+    {
+        "question": "A box contains 3 red, 4 blue, and 5 green balls. If a ball is randomly drawn, what is the probability of getting a blue ball?",
+        "options": ["A) 1/4","B) 1/3","C) 2/5","D) 4/12"],
+        "answer":"B) 1/3"
+    },
+    {
+        "question": "If 3:5 = x:10, find the value of x.",
+        "options": ["A) 4","B) 5","C) 6","D) 7"],
+        "answer":"C) 6"
+    },
+    {
+        "question": "What is the simple interest on ₹6,000 for 3 years at an interest rate of 5% per annum?",
+        "options": ["A) ₹600","B) ₹800","C) ₹900","D) ₹1,200"],
+        "answer":"C) ₹900"
+    },
+    {
+        "question": "If ₹5,000 is invested at an annual interest rate of 10% compounded annually, what will be the amount after 2 years?",
+        "options": ["A) ₹5,500","B) ₹6,000","C) ₹6,050","D) ₹6,100"],
+        "answer":"C) ₹6,050"
+    },
+    {
+        "question": "The average age of five students is 18 years. If the age of one more student is added and the new average becomes 19, what is the age of the new student?",
+        "options": ["A) 20","B) 22","C) 24","D) 26"],
+        "answer":"C) 24"
+    },
+    {
+        "question": "A pipe can fill a tank in 4 hours, while another pipe can empty the tank in 6 hours. If both pipes are opened together, how long will it take to fill the tank?",
+        "options": ["A) 8 hours", "B) 10 hours","C) 12 hours","D) 24 hours"],
+        "answer":"C) 12 hours"
+    },
+    {
+        "question": "A student scores 456 marks out of 600. What is his percentage?",
+        "options": ["A) 75%","B) 76%","C) 78%","D) 80%"],
+        "answer":"B) 76%"
+    },
+    {
+        "question": "A man sells a bicycle for ₹2,500, making a 25% profit. What was the cost price?",
+        "options": ["A) ₹1,800","B) ₹2,000","C) ₹2,200","D) ₹2,400"],
+        "answer":"B) ₹2,000"
+    },
+    {
+        "question": "A can complete a work in 10 days, and B can complete the same work in 15 days. If both work together, in how many days will they complete the work?",
+        "options": ["A) 5 days","B) 6 days","C) 8 days","D) 10 days"],
+        "answer":"B) 6 days"
+    },
+    {
+        "question": "A train 120 meters long is moving at a speed of 54 km/hr. How much time will it take to cross a pole?",
+        "options": ["A) 6 seconds","B) 8 seconds","C) 10 seconds","D) 12 seconds"],
+        "answer":"B) 8 seconds"
+    },
+    {
+        "question": "A dice is rolled once. What is the probability of getting an even number?",
+        "options": ["A) 1/6","B) 1/2","C) 1/3","D) 2/3"],
+        "answer":"B) 1/2"
+    },
+    {
+        "question": "The ratio of the ages of A and B is 3:5. If the sum of their ages is 40 years, find B's age.",
+        "options": ["A) 15 years","B) 20 years","C) 25 years","D) 30 years"],
+        "answer":"C) 25 years"
+    },
+    {
+        "question": "What is the simple interest on ₹7,500 for 4 years at an interest rate of 6% per annum?",
+        "options": ["A) ₹1,600","B) ₹1,700","C) ₹1,800","D) ₹1,900"],
+        "answer":"C) ₹1,800"
+    },
+    {
+        "question": "₹5,000 is invested at an annual interest rate of 8% compounded annually. What will be the amount after 2 years?",
+        "options": ["A) ₹5,800","B) ₹5,832","C) ₹5,920","D) ₹6,000"],
+        "answer":"B) ₹5,832"
+    },
+    {
+        "question": "The average of five numbers is 36. If one number is removed, the new average becomes 32. What is the removed number?",
+        "options": ["A) 50","B) 52","C) 54","D) 56"],
+        "answer":"C) 54"
+    }
+]

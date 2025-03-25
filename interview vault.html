@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Vault - Math Questions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .back-btn {
+            position: absolute;
+            left: 10px;
+            padding: 8px 15px;
+            background-color: #0a0a0a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .back-btn:hover {
+            background-color: #161515;
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .container {
+            width: 60%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .question-block {
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .question {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .option {
+            background: #e9ecef;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-align: center;
+            font-weight: 500;
+        }
+        .option:hover {
+            background: #d6d6d6;
+        }
+        .correct {
+            background-color: #28a745 !important;
+            color: white;
+        }
+        .incorrect {
+            background-color: #dc3545 !important;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <button class="back-btn" onclick="goBack()">Back</button>
+        <h1>Math Questions Vault</h1>
+    </div>
+
+    <div class="container" id="questions-container">
+        <!-- Questions will be loaded here dynamically -->
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function checkAnswer(selectedOption, correctAnswer) {
+            let options = selectedOption.parentElement.children;
+            for (let option of options) {
+                option.classList.remove("correct", "incorrect");
+                if (option.textContent.trim() === correctAnswer) {
+                    option.classList.add("correct");
+                }
+            }
+            if (selectedOption.textContent.trim() === correctAnswer) {
+                selectedOption.classList.add("correct");
+            } else {
+                selectedOption.classList.add("incorrect");
+            }
+        }
+
+        async function loadQuestions() {
+            try {
+                let response = await fetch("Math_Questions.JSON"); // Updated file name
+                let questions = await response.json();
+
+                let container = document.getElementById("questions-container");
+                container.innerHTML = ""; 
+
+                questions.forEach((q, index) => {
+                    let questionBlock = document.createElement("div");
+                    questionBlock.classList.add("question-block");
+
+                    let question = document.createElement("p");
+                    question.classList.add("question");
+                    question.textContent = `${index + 1}. ${q.question}`;
+
+                    let optionsDiv = document.createElement("div");
+                    optionsDiv.classList.add("options");
+
+                    q.options.forEach(option => {
+                        let optionDiv = document.createElement("div");
+                        optionDiv.classList.add("option");
+                        optionDiv.textContent = option;
+                        optionDiv.onclick = () => checkAnswer(optionDiv, q.answer);
+                        optionsDiv.appendChild(optionDiv);
+                    });
+
+                    questionBlock.appendChild(question);
+                    questionBlock.appendChild(optionsDiv);
+                    container.appendChild(questionBlock);
+                });
+            } catch (error) {
+                console.error("Error loading questions:", error);
+            }
+        }
+
+        window.onload = loadQuestions;
+    </script>
+
+</body>
+</html>

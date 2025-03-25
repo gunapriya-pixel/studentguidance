@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professions & Required Skills</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            position: relative;
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px 15px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .search-bar {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin: 40px 0 20px; /* Adjusted margin to accommodate back button */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .profession {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .profession:hover {
+            background: #e9ecef;
+        }
+        .profession h2 {
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+        .profession .details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-left: 3px solid #007bff;
+        }
+        .not-found {
+            display: none;
+            color: rgb(21, 20, 20);
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="back-button" onclick="goBack()">Back</button>
+    
+    <input type="text" class="search-bar" id="searchInput" onkeyup="searchProfessions()" placeholder="Search for a profession...">
+    <p id="notFoundMessage" class="not-found">No results found</p>
+
+    <div id="professions-list">
+        <div class="profession" onclick="toggleDetails(this)">
+            <h2>Electronics Engineer</h2>
+            <div class="details">
+                <p><strong>Required Skills:</strong> Circuit Design, Embedded Systems, PCB Design, Signal Processing, IoT</p>
+                <p><strong>Description:</strong> Electronics Engineers design and develop electronic components, devices, and systems for applications such as communication, computing, automation, and consumer electronics. They work on circuit design, embedded systems, and microcontrollers to create efficient and innovative solutions for modern technology.</p>
+            </div>
+        </div>
+        <div class="profession" onclick="toggleDetails(this)">
+            <h2>Electrical Engineer</h2>
+            <div class="details">
+                <p><strong>Required Skills:</strong> Power Systems, Electrical Circuits, Renewable Energy, Control Systems, MATLAB</p>
+                <p><strong>Description:</strong> Electrical Engineers specialize in designing, maintaining, and improving electrical power systems, renewable energy sources, and electronic devices. They work in industries such as power generation, telecommunications, and automation, ensuring efficient and sustainable energy solutions.</p>
+            </div>
+        </div>
+        <div class="profession" onclick="toggleDetails(this)">
+            <h2>Chemical Engineer</h2>
+            <div class="details">
+                <p><strong>Required Skills:</strong> Process Engineering, Thermodynamics, Chemical Reactions, Safety Management</p>
+                <p><strong>Description:</strong> Chemical Engineers work in various industries to design and optimize chemical processes for producing pharmaceuticals, fuels, food, and other essential products. They ensure safety, efficiency, and environmental sustainability in industrial manufacturing.</p>
+            </div>
+        </div>
+        <div class="profession" onclick="toggleDetails(this)">
+            <h2>Aerospace Engineer</h2>
+            <div class="details">
+                <p><strong>Required Skills:</strong> Aerodynamics, Propulsion Systems, Aircraft Design, CFD Analysis</p>
+                <p><strong>Description:</strong> Aerospace Engineers design and analyze aircraft, spacecraft, and propulsion systems. They work on improving the aerodynamics, structural integrity, and fuel efficiency of aerospace vehicles, ensuring safe and advanced technologies for aviation and space exploration.</p>
+            </div>
+        </div>
+       
+        <div class="profession" onclick="toggleDetails(this)">
+            <h2>Software Engineer</h2>
+            <div class="details">
+                <p><strong>Required Skills:</strong> Programming, Software Development, Data Structures, Algorithms, Problem Solving</p>
+                <p><strong>Description:</strong> Software Engineers design, develop, test, and maintain software applications and systems. They work with programming languages, frameworks, and databases to create innovative software solutions for industries such as finance, healthcare, and entertainment.</p>
+            </div>
+        </div>
+        <div class="profession" onclick="toggleDetails(this)">
+            <h2>Hardware Engineer</h2>
+            <div class="details">
+                <p><strong>Required Skills:</strong>  Arduino, Raspberry Pi, STM32, and ESP32, Verilog, VHDL, or SystemVerilog for FPGA (Field-Programmable Gate Arrays) and ASIC (Application-Specific Integrated Circuit) development.</p>
+                <p><strong>Description:</strong>  A Hardware Engineer is a professional responsible for designing, developing, testing, and maintaining physical electronic components and systems. They work with microprocessors, circuit boards, memory devices, sensors, and embedded systems to create high-performance hardware solutions for industries such as computing, telecommunications, automotive, aerospace, and consumer electronics. </p>
+            </div>
+        </div>
+        <div class="profession" onclick="toggleDetails(this)">
+            <h2>Mechanical Engineer</h2>
+            <div class="details">
+                <p><strong>Required Skills:</strong> CAD, Thermodynamics, Fluid Mechanics, Manufacturing, Robotics</p>
+                <p><strong>Description:</strong> Mechanical Engineers design, develop, and test mechanical systems, machines, and tools. They work in industries such as automotive, aerospace, and robotics, ensuring efficient and innovative mechanical designs.</p>
+            </div>
+        </div>
+        <div class="profession" onclick="toggleDetails(this)">
+            <h2>Robotic Engineer</h2>
+            <div class="details">
+                <p><strong>Required Skills:</strong>  Python, C++, and MATLAb,robot operating system (ROS),electronics and embedded systems,Artificial intelligence and computer vision ,IoT and wireless communication</p>
+                <p><strong>Description:</strong> A Robotics Engineer is a specialized professional who designs, develops, tests, and maintains robotic systems. They integrate mechanical, electrical, and software engineering principles to create robots that can perform tasks autonomously or assist humans in industries such as manufacturing, healthcare, aerospace, defense, and automation.</p>
+            </div>
+        </div>
+        <div class="profession" onclick="toggleDetails(this)">
+            <h2>Civil Engineer</h2>
+            <div class="details">
+                <p><strong>Required Skills:</strong>  To succeed in this field, civil engineers must possess a combination of technical, analytical, and managerial skills.</p>
+                <p><strong>Description:</strong> A Civil Engineer is a professional responsible for designing, constructing, and maintaining infrastructure such as buildings, roads, bridges, and water systems. They apply principles of structural engineering, geotechnical analysis, transportation planning, and environmental sustainability to ensure safe, durable, and cost-effective projects. </p>
+            </div>
+        </div>
+        <div class="profession" onclick="toggleDetails(this)">
+            <h2> Artificial Engineer </h2>
+            <div class="details">
+                <p><strong>Required Skills:</strong> Data Structures & Algorithms,Python, R, Java, C++,Neural Networks & Deep Learning,Data Wrangling & Preprocessing.</p>
+                <p><strong>Description:</strong> An AI/ML Engineer is a professional who develops intelligent systems that can learn from data, recognize patterns, and make autonomous decisions. They specialize in designing and implementing machine learning models, deep learning algorithms, and artificial intelligence solutions for various applications such as natural language processing (NLP), computer vision, and predictive analytics.</p>
+        </div>
+    </div>
+
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function toggleDetails(element) {
+            var details = element.querySelector(".details");
+            details.style.display = details.style.display === "block" ? "none" : "block";
+        }
+
+        function searchProfessions() {
+            var input, filter, professions, h2, i, found;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            professions = document.getElementById("professions-list").getElementsByClassName("profession");
+            found = false;
+            
+            for (i = 0; i < professions.length; i++) {
+                h2 = professions[i].getElementsByTagName("h2")[0];
+                if (h2.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    professions[i].style.display = "";
+                    found = true;
+                } else {
+                    professions[i].style.display = "none";
+                }
+            }
+            document.getElementById("notFoundMessage").style.display = found ? "none" : "block";
+        }
+    </script>
+
+</body>
+</html>
